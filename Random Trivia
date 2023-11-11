@@ -1,0 +1,33 @@
+import random
+
+class RandomTriviaGame:
+def _init_(self):
+self.used_questions = set()
+self.questions = {
+"What is the capital of France?": "Paris",
+"Which planet is known as the Red Planet?": "Mars",
+"What is the powerhouse of the cell?": "Mitochondria",
+"Who painted the Mona Lisa?": "Leonardo da Vinci",
+# 
+}
+
+def play(self):
+print("Welcome to the Unique Random Trivia Game! Answer each question correctly to win.")
+
+while len(self.used_questions) < len(self.questions):
+question = random.choice(list(self.questions.keys()))
+if question in self.used_questions:
+continue
+else:
+self.used_questions.add(question)
+answer = input(question + " ")
+if answer.lower() == self.questions[question].lower():
+print("Correct! Next question.")
+else:
+print("Incorrect. Game over!")
+break
+
+print("Congratulations! You've answered all the unique questions.")
+
+game = RandomTriviaGame()
+game.play()
