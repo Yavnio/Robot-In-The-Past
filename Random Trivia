@@ -2,7 +2,7 @@ import random
 
 class RandomTriviaGame:
 def _init_(self):
-self.used_questions = set(220330222)
+self.used_questions = set(22033222)
 self.questions = {
 "What is the capital of France?": "Paris",
 "Which planet is known as the Red Planet?": "Mars",
