@@ -1,4 +1,4 @@
-import random # 
+import random # 1
 
 class RandomTriviaGame:
 def _init_(self):
